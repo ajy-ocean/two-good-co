@@ -20,13 +20,66 @@ body {
   background-color: #f7f7f7;
 }
 
+#nav {
+  width: 100%;
+  position: fixed;
+  z-index: 12;
+  padding: 18px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+#nav #nav-part2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+#links {
+  padding: 14px;
+}
+
+#nav-part1 {
+  height: 83px;
+  overflow: hidden;
+}
+
+#nav-part1 svg {
+  display: block;
+}
+
+#nav-part2 #links a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+  margin: 0 15px;
+}
+
+#icons {
+  padding: 14px;
+  border-radius: 18px;
+  background-color: #f7f7f7;
+}
+
+#nav-part2 #icons i {
+  font-size: 18px;
+  margin: 0 15px;
+  font-weight: 100;
+}
+
 #cursor {
   height: 150px;
   width: 150px;
-  background-color: blanchedalmond;
+  background-color: black;
   border-radius: 50%;
   position: fixed;
+  z-index: 10;
   transform: translate(-50%, -50%) scale(0);
+  opacity: 0.5;
 }
 
 #page1 {
@@ -133,6 +186,57 @@ body {
 }
 
 @media (max-width: 600px) {
+
+  #nav {
+    width: 100%;
+    position: fixed;
+    z-index: 12;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 15px;
+  }
+
+  #nav #nav-part2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  #links {
+    padding: 14px;
+    display: none;
+  }
+
+  #nav-part1 {
+    height: 66px;
+    overflow: hidden;
+  }
+
+  #nav-part1 svg {
+    display: block;
+    height: 68px;
+    width: 80px;
+  }
+
+  #nav #twogoodlogo{
+    height: 40px;
+    margin-left: -20px;
+  }
+
+  #icons {
+    padding: 7px;
+    border-radius: 18px;
+    background-color: #f7f7f7;
+  }
+
+  #nav-part2 #icons i {
+    font-size: 15px;
+    margin: 0 15px;
+    font-weight: 100;
+  }
+
   #page1 {
     min-height: 70vh;
     width: 100%;
@@ -179,16 +283,38 @@ body {
     margin-bottom: 3vw;
   }
 
-  /* #page2 .elem img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    scale: 1.2;
+  #page2 .elem .dets {
+    height: 40px;
+    border-radius: 50px;
+    width: 70%;
+    position: absolute;
+    z-index: 9;
+    background-color: #000;
   }
 
   #page3 {
-    height: 100vh;
+    min-height: 120vh;
     width: 100%;
-    background-color: orange;
-  } */
+    position: relative;
+    background-color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .child {
+    height: 54vh;
+    width: 88vw;
+    position: relative;
+    padding: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .child img {
+    height: 100%;
+  }
+
 }
